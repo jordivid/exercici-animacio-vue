@@ -1,0 +1,13 @@
+
+@media (max-width: 429px) {
+    h1{
+        font-size: 25px;
+    }
+}
+
+@media (max-height: 429px) {
+    h1{
+        font-size: 25px;
+        margin-top: -20px;
+    }
+}
