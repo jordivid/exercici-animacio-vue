@@ -1,0 +1,34 @@
+.container {
+    background-color: rgb(81, 131, 160);
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#formcard, #productList {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#formcard input {
+    margin-bottom: 10px;
+}
+
+.btn-default {
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid purple;
+    background-color: purple;
+    color: white;
+}
+
+.prod {
+    border: 1px solid black; 
+    border-radius: 3px; 
+    padding: 10px 5px;
+    background-color: white
+}
+
+#areaNotificacions{
+    background-color: "rgb(83, 182, 83)";
+}

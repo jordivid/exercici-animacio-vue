@@ -1,10 +1,7 @@
-// import Vuex from 'vuex';
-
 import store from "../store"
 
 export default {
     computed: {
-        // ...Vuex.mapGetters({movies:'GetMovies'})
         search: {
             get() {
                 return store.state.filters.search;
@@ -19,6 +16,13 @@ export default {
             },
             set(value) {
                 store.commit('SetAvailable', value);
+            }
+        }
+    },
+    methods: {
+        prueba() {
+            if(store.state.filters.search.length > 2) {
+                store.state.animation = true;
             }
         }
     }
