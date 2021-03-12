@@ -1,4 +1,5 @@
 import  Product from "./product.js";
+import $ from 'jquery'; 
 
 export default {
     name: 'Formulari',
@@ -36,8 +37,14 @@ export default {
         eliminar(e) {
             // S'elimina la ficha de producte de la llista i també l'objecte
             let producte = this.objectes.get(e.target.id);
-            producte.RemoveFromList();
+
             this.objectes.delete(e.target.id);
+            $("#"+producte.id).animate({
+                opacity: '0'
+            }, 500, function() {
+                producte.RemoveFromList();
+            });
+
         },
         enviar() {
             // Es crea l'objecte Product, es valida i s'afegeix a la llista de productes
@@ -84,6 +91,11 @@ export default {
             ++this.indiceId;
             producte.AddToList();
             document.getElementById("b" + producte.id).addEventListener("click", this.eliminar);
+
+            $("#"+producte.id).animate({
+                opacity: '1'
+            }, 500);
+
 
             this.objectes.set("b" + producte.id, producte);
             this.inicialitzar();

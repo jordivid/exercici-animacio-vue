@@ -78,7 +78,6 @@ class Product {
         codigo += `<div><span class="font-weight-bold">Product Date:</span> <span id="d${this.id}">${this.date}</span></div></div>`;
         codigo += '<div class="d-flex align-items-center">';
         codigo += `<button type="button" class="btn btn-danger" id="b${this.id}">Delete</button></div>`;
-
         return codigo;
     }
 

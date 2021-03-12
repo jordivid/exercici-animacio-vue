@@ -24,4 +24,4 @@
 
 <script src="./../scripts/formulari.js"></script>
 
-<style src="./../styles/css/formulari.css" scoped></style>
+<style src="./../styles/css/formulari.css"></style>
