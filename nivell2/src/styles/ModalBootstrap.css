@@ -1,0 +1,52 @@
+.myanimation-enter{
+    opacity: 0;
+}
+
+.myanimation-enter-active{
+    transition: all 2s;
+}
+
+.myanimation-enter-to{
+    opacity: 1;
+}
+
+.dialog-background{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.4);
+}
+
+@media (max-width: 415px) {
+    .dialog-foreground{
+        width: 90%;
+    }
+}
+
+@media (min-width: 416px) and (max-width: 770px) {
+    .dialog-foreground{
+        width: 70%;
+    }
+}
+
+@media (min-width: 771px) and (max-width: 1024px) {
+    .dialog-foreground{
+        width: 50%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .dialog-foreground{
+        width: 30%;
+    }
+}
+
+.dialog-foreground{
+    margin: auto;
+    margin-top: 30px;
+    background-color: white;
+    z-index: 15;
+}

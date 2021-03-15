@@ -1,9 +1,16 @@
+import store from "../store";
+
 export default {
     name: 'ModalBootstrap',
+    computed: {
+        Show() {
+            return store.getters.GetShowModal;
+        }
+    },
     methods: {
-        mostrarDialeg() {
-            this.show = true;
+        SwitchShow() {
             this.$emit('mostrar');
+            store.commit('SwitchModal');
         }
     },
     filters: {

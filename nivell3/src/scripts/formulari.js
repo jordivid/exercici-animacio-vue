@@ -73,11 +73,6 @@ export default {
             validation = producte.Validate();
 
             if(validation == false) {
-                // if(this.product == "") {
-                //     product.focus();
-                // } else {
-                //     price.focus();
-                // }
                 return;
             }
 

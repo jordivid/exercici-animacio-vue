@@ -1,3 +1,4 @@
+import store from "../store";
 import ModalBootstrap from './../components/ModalBootstrap.vue';
 
 export default {
@@ -8,16 +9,27 @@ export default {
     data() {
         return {
             quantitat: '',
-            obert: true
+            muestra: false
+        }
+    },
+    computed: {
+        Show() {
+            return store.getters.GetShowModal;
         }
     },
     methods: {
         tancar() {
             this.quantitat = '';
+            this.SwitchShow();
+            this.$emit('ocultar');
         },
         acceptar() {
             this.quantitat = '';
+            this.SwitchShow();
             this.$emit('enviar');
+        },
+        SwitchShow() {
+            store.commit('SwitchModal');
         }
     },
     emits: [

@@ -1,10 +1,10 @@
 <template>
     <div>
         <slot></slot>
-        <ModalBootstrap :cant="quantitat" @mostrar="$emit('ocultar')">
+        <ModalBootstrap :show="muestra" :cant="quantitat" @mostrar="$emit('ocultar')">
             <template #header>
                 <h4 class="modal-title">Conversor de moneda</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <button type="button" class="btn btn-sm btn-secondary" @click="tancar">&times;</button>
             </template>
 
             <template #body>
@@ -13,8 +13,8 @@
             </template>
             
             <template #footer>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal" @click="tancar">Tancar</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal" @click="acceptar">Enviar</button>
+                <button type="button" class="btn btn-secondary" @click="tancar">Tancar</button>
+                <button type="button" class="btn btn-primary" @click="acceptar">Enviar</button>
             </template>
         </ModalBootstrap>
     </div>
